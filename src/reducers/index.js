@@ -1,4 +1,10 @@
-export default (state, action) =>{
-    console.log(action);
-    return state;
-}
+import {combineReducers} from 'redux';
+import userReducer       from './userReducer';
+
+
+
+const reducers =  combineReducers({
+      userReducer
+})
+
+export default reducers;

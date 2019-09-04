@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import User from  '../src/components/user';
+import Register from  './components/register';
 
 import './App.css';
 
@@ -18,7 +18,7 @@ class App extends Component {
         <div>
             Jazz Cricket
             <hr/>
-            <User />
+            <Register />
         </div>
       )
     }

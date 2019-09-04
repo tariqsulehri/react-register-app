@@ -1,10 +1,8 @@
 import {ADD_USER, EDIT_USER ,FETCH_USERS, FILTER_USER, DELETE_USER}  from './actionTypes';
-import uuid from 'uuid';
 
-
-export const add_user=({name=''},)=>({
-    type: ADD_USER,
-    payload: {id:uuid(), name: name}
+export const add_user=(user)=>({
+             type: ADD_USER,
+             user
 });
 
 export const edit_user=(id)=>({
@@ -28,29 +26,3 @@ export const filter_user=(id)=>({
     payload: id
 });
 
-
-const addUser=()=>{
-
-
-
-}
-
-const editUser=()=>{
-
-    
-}
-
-const deleteUser=()=>{
-
-    
-}
-
-const filterUser=()=>{
-
-    
-}
-
-const fetchUsers=()=>{
-
-    
-}
