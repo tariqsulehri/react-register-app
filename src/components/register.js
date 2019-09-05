@@ -23,7 +23,7 @@ async componentDidMount(){
      try{
           const { data } =  await getUsers();
           this.setState({data});
-          console.log(data);
+          con
      }catch(ex){
          if(ex.response  && ex.response.status >= 400 && ex.response.status <= 500 ){
             console.log('An Expected Error Has Occoured....', ex.message);
@@ -40,11 +40,12 @@ async componentDidMount(){
     e.preventDefault();
     
     try{
-          await this.setState({user:{...this.state.user , id: uuid()}});
-          const {data} = await saveUser('users', this.state.user);
-          console.log('resp.......:',data);
+           await this.setState({user:{...this.state.user , id: uuid()}});
+           console.log('resp.......:',this.state.user);
+           const {data} = await saveUser(this.state.user);
+           console.log('resp.......:', data); 
 
-        }catch(ex){
+          }catch(ex){
           if(ex.response  && ex.response.status >= 200 && ex.response.status < 400 ){
               console.log('An Expected Error Has Occoured....', ex.message);
           }  

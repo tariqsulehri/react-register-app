@@ -15,9 +15,7 @@ axios.interceptors.response.use(null, error=>{
 
 });
 
-axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-
 export default axios.create({
-    baseURL : apiEndpoint //"https://jsonplaceholder.typicode.com/" 
+    baseURL : apiEndpoint //"https://jsonplaceholder.typicode.com" 
 });
 
